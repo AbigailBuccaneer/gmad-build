@@ -1,0 +1,13 @@
+language: cpp
+
+addons:
+  apt:
+    packages:
+      - premake4
+
+script:
+  - cd bootil/projects && premake4 gmake
+  - cd linux/gmake && make -j4
+  - cd ../../../../gmad && premake4 --bootil_lib="../bootil/lib/linux/gmake/" --bootil_inc="../bootil/include" gmake
+  - make -j4
+  - ./gmad_linux --help >/dev/null

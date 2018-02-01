@@ -1,0 +1,6 @@
+[submodule "bootil"]
+	path = bootil
+	url = https://github.com/AbigailBuccaneer/bootil.git
+[submodule "gmad"]
+	path = gmad
+	url = https://github.com/garrynewman/gmad.git
