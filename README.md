@@ -2,3 +2,5 @@
 
 Automated builds of [garrynewman/gmad][].
 See https://github.com/AbigailBuccaneer/gmad-build/releases/latest for binaries.
+
+[garrynewman/gmad]: https://github.com/garrynewman/gmad
