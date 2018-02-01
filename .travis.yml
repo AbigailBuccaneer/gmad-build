@@ -11,3 +11,12 @@ script:
   - cd ../../../../gmad && premake4 --bootil_lib="../bootil/lib/linux/gmake/" --bootil_inc="../bootil/include" gmake
   - make -j4
   - ./gmad_linux --help >/dev/null
+
+deploy:
+  provider: releases
+  api_key:
+    secure: oZrUextwQ9I80qy+tle31KfKaOqF4FSa0/kTdgb0Gry3uG8v7bZE3A7P2Iyk3LsyTLuaIeCPqq2oRQc0NAuqTmRTvQqsLp1tbYwMiRHuaeD2ZNHffM+RDVMh4+DY3jp1vDutc4RGB884/zHnU4obAU+oNhiGkTT6VZE6qKp/6CBuQE/fxYPmJ6dgKtulw+PQ+Rxc/XdEGb50yqE40Ffbj0nOMq/dizLI/w0+410OEZEGeHerKAyjRjNCkS9sOBPFBj+5Fw0/S9o5lxgfvg6+x1ViGaXSjm7IPYRgukuYBoR5vu/npoIuEDAAbGHi9FstPgycHXKytCP8RBXr0amjFjSEBvQ+iGrXdpxyQhy1wTLG6OlO1fYsHg0xolfWPM4R/EwUXyIylYQHyU9LWaKH2et58jLRHkOiZd5t2BDmnNeD8ojs7oov8kPXkJXeWes++YhRkSN3gLNCQv4u9XMlMjMK0XFwz0mggA7s0D5Ga3hMAhXsP3VEc0dDMJ+Xx/DCS4l2Bk4LY6+niQZC5uPG+RWZcQWnWUOdARdClLAcylOAsuhCPvDfmy7WSgdoBcFrvAdHBNsHoGagWJvtIuHUcdtsqDl0yRbApQTnL+dGLSLFh9jjeBS81xQAi7xih2oNssoZ9dhHut/b2Shaes0goIF0zR8KQ446fqs9nseSpdo=
+  file: gmad/gmad_linux
+  on:
+    repo: AbigailBuccaneer/gmad-build
+    tags: true
